@@ -1,0 +1,1 @@
+B:\GitHub\kinopoisk-bot\kinopoisk-bot\kinopoisk-bot\bin\Debug\kinopoisk-bot.exe.config
