@@ -40,7 +40,7 @@ namespace FilmAdvisor {
 
         public IEnumerable<IFilm> EarnFilms(IEnumerable<KeyValuePair<string, object>> requestDict, int amountOfFilms) {
             var requester = new Requester();
-            var response = requester.Search((IParameters)requestDict);
+            var response = requester.Search(new Parameters(requestDict));
             var parser = new Parser();
             return parser.GetFilms(response).Take(amountOfFilms);
         }

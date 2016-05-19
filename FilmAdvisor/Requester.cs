@@ -19,7 +19,7 @@ namespace FilmAdvisor {
         public IRestResponse Search(IParameters parameters) {
             var request = new RestRequest("s/", Method.GET);
 
-            foreach (var param in parameters) {
+            foreach (var param in new parameters) {
                 request.AddParameter(param.Key, param.Value);
             }
 

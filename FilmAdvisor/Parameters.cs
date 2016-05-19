@@ -21,16 +21,21 @@ namespace FilmAdvisor {
             };
         }
 
-        public void SetName(string name) {
-            parameters["m_act[find]"] = name;
+        public Parameters(IEnumerable<KeyValuePair<string, object>> p) {
+            parameters = new Dictionary<string, object> {
+                ["level"] = 7,
+                ["from"] = "forma",
+                ["result"] = "adv",
+                ["m_act[from]"] = "forma",
+                ["m_act[what]"] = "content"
+            };
+            foreach (var param in p) {
+                Add(String.Format("m_act[{}]", param.Key), param.Value);
+            }
         }
 
-        public void SetYear(int year) {
-            parameters["m_act[year]"] = year;
-        }
-
-        public void SetGenre(int genre) {
-            parameters["m_act[genre][]"] = genre;
+        public void Add(string name, object obj) {
+            parameters.Add(name, obj);
         }
 
         public IEnumerator<KeyValuePair<string, object>> GetEnumerator() {
