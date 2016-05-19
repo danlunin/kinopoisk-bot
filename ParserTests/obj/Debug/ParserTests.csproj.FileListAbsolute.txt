@@ -1,0 +1,11 @@
+B:\GitHub\kinopoisk-bot\ParserTests\obj\Debug\ParserTests.csprojResolveAssemblyReference.cache
+B:\GitHub\kinopoisk-bot\ParserTests\bin\Debug\ParserTests.dll
+B:\GitHub\kinopoisk-bot\ParserTests\bin\Debug\ParserTests.pdb
+B:\GitHub\kinopoisk-bot\ParserTests\bin\Debug\FilmAdvisor.exe
+B:\GitHub\kinopoisk-bot\ParserTests\bin\Debug\nunit.framework.dll
+B:\GitHub\kinopoisk-bot\ParserTests\bin\Debug\RestSharp.dll
+B:\GitHub\kinopoisk-bot\ParserTests\bin\Debug\FilmAdvisor.pdb
+B:\GitHub\kinopoisk-bot\ParserTests\bin\Debug\nunit.framework.xml
+B:\GitHub\kinopoisk-bot\ParserTests\bin\Debug\RestSharp.xml
+B:\GitHub\kinopoisk-bot\ParserTests\obj\Debug\ParserTests.dll
+B:\GitHub\kinopoisk-bot\ParserTests\obj\Debug\ParserTests.pdb
