@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using RestSharp;
 
 namespace FilmAdvisor
 {
     public interface IParser
     {
-        IEnumerable<IFilm> GetFilms(RestResponse response);
+        IEnumerable<IFilm> GetFilms(IRestResponse response);
     }
 }

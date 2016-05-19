@@ -10,3 +10,6 @@ C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\FilmAdv
 C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\FilmAdvisor\FilmAdvisor\bin\Debug\FilmAdvisor.exe
 C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\FilmAdvisor\FilmAdvisor\bin\Debug\FilmAdvisor.pdb
 C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\FilmAdvisor\FilmAdvisor\obj\Debug\FilmAdvisor.csprojResolveAssemblyReference.cache
+B:\GitHub\kinopoisk-bot\FilmAdvisor\bin\Debug\FilmAdvisor.exe.config
+B:\GitHub\kinopoisk-bot\FilmAdvisor\obj\Debug\FilmAdvisor.exe
+B:\GitHub\kinopoisk-bot\FilmAdvisor\obj\Debug\FilmAdvisor.pdb
