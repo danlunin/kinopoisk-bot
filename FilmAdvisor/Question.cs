@@ -10,13 +10,19 @@ namespace FilmAdvisor
     {
         Year,
         Genre,
-        Name
+        Name,
+        BorderRate
     }
 
     public class Question
     {
-        string text;
-        QuestionType questionType;
-        string pattern;
+        public string Text { get; }
+        public QuestionType QuestionType { get; }
+        public string Pattern { get; }
+
+        public Question(QuestionType type, string txt) {
+            Text = txt;
+            QuestionType = type;
+        }
     }
 }
