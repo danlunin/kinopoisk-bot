@@ -1,0 +1,12 @@
+c:\users\даниил\documents\visual studio 2013\Projects\FilmAdvisor\FilmAdvisor\bin\Debug\FilmAdvisor.exe.config
+c:\users\даниил\documents\visual studio 2013\Projects\FilmAdvisor\FilmAdvisor\obj\Debug\FilmAdvisor.csprojResolveAssemblyReference.cache
+c:\users\даниил\documents\visual studio 2013\Projects\FilmAdvisor\FilmAdvisor\bin\Debug\FilmAdvisor.exe
+c:\users\даниил\documents\visual studio 2013\Projects\FilmAdvisor\FilmAdvisor\bin\Debug\FilmAdvisor.pdb
+c:\users\даниил\documents\visual studio 2013\Projects\FilmAdvisor\FilmAdvisor\obj\Debug\FilmAdvisor.exe
+c:\users\даниил\documents\visual studio 2013\Projects\FilmAdvisor\FilmAdvisor\obj\Debug\FilmAdvisor.pdb
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\FilmAdvisor\FilmAdvisor\bin\Debug\FilmAdvisor.exe.config
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\FilmAdvisor\FilmAdvisor\obj\Debug\FilmAdvisor.exe
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\FilmAdvisor\FilmAdvisor\obj\Debug\FilmAdvisor.pdb
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\FilmAdvisor\FilmAdvisor\bin\Debug\FilmAdvisor.exe
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\FilmAdvisor\FilmAdvisor\bin\Debug\FilmAdvisor.pdb
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\FilmAdvisor\FilmAdvisor\obj\Debug\FilmAdvisor.csprojResolveAssemblyReference.cache
