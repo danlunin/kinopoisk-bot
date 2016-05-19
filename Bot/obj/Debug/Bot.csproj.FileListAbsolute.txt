@@ -1,0 +1,2 @@
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\FilmAdvisor\Bot\bin\Debug\Bot.exe.config
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\FilmAdvisor\Bot\obj\Debug\Bot.csprojResolveAssemblyReference.cache

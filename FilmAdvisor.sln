@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmAdvisor", "FilmAdvisor\FilmAdvisor.csproj", "{B2BE4174-D548-4CF1-9728-C2CD4311CE58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bot", "Bot\Bot.csproj", "{4A9C2C12-F4CC-4822-8D27-77EAB119E1C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2BE4174-D548-4CF1-9728-C2CD4311CE58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2BE4174-D548-4CF1-9728-C2CD4311CE58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2BE4174-D548-4CF1-9728-C2CD4311CE58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2BE4174-D548-4CF1-9728-C2CD4311CE58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A9C2C12-F4CC-4822-8D27-77EAB119E1C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A9C2C12-F4CC-4822-8D27-77EAB119E1C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A9C2C12-F4CC-4822-8D27-77EAB119E1C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A9C2C12-F4CC-4822-8D27-77EAB119E1C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
