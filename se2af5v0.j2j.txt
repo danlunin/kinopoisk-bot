@@ -1,0 +1,120 @@
+﻿commit?
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   .vs/FilmAdvisor/v14/.suo
+#	modified:   Bot/App.config
+#	new file:   Bot/Bot.cs
+#	modified:   Bot/Config.cs
+#	modified:   Bot/Program.cs
+#	new file:   Bot/Question.cs
+#	new file:   Bot/TelegramBot.csproj
+#	new file:   Bot/bin/Debug/Bot.exe
+#	modified:   Bot/bin/Debug/Bot.exe.config
+#	new file:   Bot/bin/Debug/Bot.pdb
+#	modified:   Bot/bin/Debug/Bot.vshost.exe
+#	modified:   Bot/bin/Debug/Bot.vshost.exe.config
+#	new file:   Bot/bin/Debug/FilmAdvisor.exe
+#	new file:   Bot/bin/Debug/FilmAdvisor.pdb
+#	new file:   Bot/bin/Debug/Newtonsoft.Json.dll
+#	new file:   Bot/bin/Debug/Newtonsoft.Json.xml
+#	new file:   Bot/bin/Debug/System.Net.Http.Formatting.dll
+#	new file:   Bot/bin/Debug/System.Net.Http.Formatting.xml
+#	new file:   Bot/bin/Debug/Telegram.Bot.dll
+#	new file:   Bot/bin/Debug/Telegram.Bot.xml
+#	modified:   Bot/obj/Debug/Bot.csproj.FileListAbsolute.txt
+#	modified:   Bot/obj/Debug/Bot.csprojResolveAssemblyReference.cache
+#	new file:   Bot/obj/Debug/Bot.exe
+#	new file:   Bot/obj/Debug/Bot.pdb
+#	modified:   Bot/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+#	new file:   Bot/obj/Debug/Telegram.Bot.csproj.FileListAbsolute.txt
+#	new file:   Bot/obj/Debug/Telegram.Bot.csprojResolveAssemblyReference.cache
+#	new file:   Bot/obj/Debug/TelegramBot.csproj.FileListAbsolute.txt
+#	new file:   Bot/obj/Debug/TelegramBot.csprojResolveAssemblyReference.cache
+#	modified:   Bot/packages.config
+#	modified:   FilmAdvisor.sln
+#	modified:   FilmAdvisor/App.config
+#	modified:   FilmAdvisor/Controller.cs
+#	modified:   FilmAdvisor/Film.cs
+#	modified:   FilmAdvisor/FilmAdvisor.csproj
+#	modified:   FilmAdvisor/IBot.cs
+#	modified:   FilmAdvisor/IController.cs
+#	modified:   FilmAdvisor/IFilm.cs
+#	modified:   FilmAdvisor/IParameters.cs
+#	modified:   FilmAdvisor/IParser.cs
+#	modified:   FilmAdvisor/IRequester.cs
+#	new file:   FilmAdvisor/ISelector.cs
+#	modified:   FilmAdvisor/Parameters.cs
+#	modified:   FilmAdvisor/Parser.cs
+#	modified:   FilmAdvisor/Program.cs
+#	modified:   FilmAdvisor/Requester.cs
+#	new file:   FilmAdvisor/bin/Debug/Bot.exe
+#	new file:   FilmAdvisor/bin/Debug/Bot.pdb
+#	modified:   FilmAdvisor/bin/Debug/FilmAdvisor.exe
+#	modified:   FilmAdvisor/bin/Debug/FilmAdvisor.exe.config
+#	modified:   FilmAdvisor/bin/Debug/FilmAdvisor.pdb
+#	modified:   FilmAdvisor/bin/Debug/FilmAdvisor.vshost.exe.config
+#	new file:   FilmAdvisor/bin/Debug/Newtonsoft.Json.dll
+#	new file:   FilmAdvisor/bin/Debug/Newtonsoft.Json.xml
+#	new file:   FilmAdvisor/bin/Debug/System.Net.Http.Formatting.dll
+#	new file:   FilmAdvisor/bin/Debug/System.Net.Http.Formatting.xml
+#	new file:   FilmAdvisor/bin/Debug/Telegram.Bot.dll
+#	new file:   FilmAdvisor/bin/Debug/Telegram.Bot.xml
+#	modified:   FilmAdvisor/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+#	modified:   FilmAdvisor/obj/Debug/FilmAdvisor.csproj.FileListAbsolute.txt
+#	modified:   FilmAdvisor/obj/Debug/FilmAdvisor.csprojResolveAssemblyReference.cache
+#	modified:   FilmAdvisor/obj/Debug/FilmAdvisor.exe
+#	modified:   FilmAdvisor/obj/Debug/FilmAdvisor.pdb
+#	modified:   ParserTests/ParserTests.csproj
+#	new file:   ParserTests/app.config
+#	new file:   ParserTests/bin/Debug/Bot.exe
+#	new file:   ParserTests/bin/Debug/Bot.pdb
+#	modified:   ParserTests/bin/Debug/FilmAdvisor.exe
+#	modified:   ParserTests/bin/Debug/FilmAdvisor.pdb
+#	new file:   ParserTests/bin/Debug/Newtonsoft.Json.dll
+#	new file:   ParserTests/bin/Debug/Newtonsoft.Json.xml
+#	modified:   ParserTests/bin/Debug/ParserTests.dll
+#	new file:   ParserTests/bin/Debug/ParserTests.dll.config
+#	modified:   ParserTests/bin/Debug/ParserTests.pdb
+#	new file:   ParserTests/bin/Debug/System.Net.Http.Formatting.dll
+#	new file:   ParserTests/bin/Debug/System.Net.Http.Formatting.xml
+#	new file:   ParserTests/bin/Debug/Telegram.Bot.dll
+#	new file:   ParserTests/bin/Debug/Telegram.Bot.xml
+#	modified:   ParserTests/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+#	modified:   ParserTests/obj/Debug/ParserTests.csproj.FileListAbsolute.txt
+#	modified:   ParserTests/obj/Debug/ParserTests.csprojResolveAssemblyReference.cache
+#	modified:   ParserTests/obj/Debug/ParserTests.dll
+#	modified:   ParserTests/obj/Debug/ParserTests.pdb
+#	new file:   packages/Microsoft.AspNet.WebApi.Client.5.2.3/Microsoft.AspNet.WebApi.Client.5.2.3.nupkg
+#	new file:   packages/Microsoft.AspNet.WebApi.Client.5.2.3/lib/net45/System.Net.Http.Formatting.dll
+#	new file:   packages/Microsoft.AspNet.WebApi.Client.5.2.3/lib/net45/System.Net.Http.Formatting.xml
+#	new file:   packages/Microsoft.AspNet.WebApi.Client.5.2.3/lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll
+#	new file:   packages/Microsoft.AspNet.WebApi.Client.5.2.3/lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.xml
+#	new file:   packages/Newtonsoft.Json.9.0.1-beta1/Newtonsoft.Json.9.0.1-beta1.nupkg
+#	new file:   packages/Newtonsoft.Json.9.0.1-beta1/lib/net20/Newtonsoft.Json.dll
+#	new file:   packages/Newtonsoft.Json.9.0.1-beta1/lib/net20/Newtonsoft.Json.xml
+#	new file:   packages/Newtonsoft.Json.9.0.1-beta1/lib/net35/Newtonsoft.Json.dll
+#	new file:   packages/Newtonsoft.Json.9.0.1-beta1/lib/net35/Newtonsoft.Json.xml
+#	new file:   packages/Newtonsoft.Json.9.0.1-beta1/lib/net40/Newtonsoft.Json.dll
+#	new file:   packages/Newtonsoft.Json.9.0.1-beta1/lib/net40/Newtonsoft.Json.xml
+#	new file:   packages/Newtonsoft.Json.9.0.1-beta1/lib/net45/Newtonsoft.Json.dll
+#	new file:   packages/Newtonsoft.Json.9.0.1-beta1/lib/net45/Newtonsoft.Json.xml
+#	new file:   packages/Newtonsoft.Json.9.0.1-beta1/lib/netstandard1.0/Newtonsoft.Json.dll
+#	new file:   packages/Newtonsoft.Json.9.0.1-beta1/lib/netstandard1.0/Newtonsoft.Json.xml
+#	new file:   packages/Newtonsoft.Json.9.0.1-beta1/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll
+#	new file:   packages/Newtonsoft.Json.9.0.1-beta1/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml
+#	new file:   packages/Newtonsoft.Json.9.0.1-beta1/lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll
+#	new file:   packages/Newtonsoft.Json.9.0.1-beta1/lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.xml
+#	new file:   packages/Newtonsoft.Json.9.0.1-beta1/tools/install.ps1
+#	new file:   packages/Telegram.Bot.10.1.0-beta-1/Telegram.Bot.10.1.0-beta-1.nupkg
+#	new file:   packages/Telegram.Bot.10.1.0-beta-1/lib/net45/Telegram.Bot.dll
+#	new file:   packages/Telegram.Bot.10.1.0-beta-1/lib/net45/Telegram.Bot.xml
+#	new file:   packages/Telegram.Bot.10.1.0-beta-1/lib/net46/Telegram.Bot.dll
+#	new file:   packages/Telegram.Bot.10.1.0-beta-1/lib/net46/Telegram.Bot.xml
+#	new file:   packages/Telegram.Bot.10.1.0-beta-1/lib/netstandard1.1/Telegram.Bot.dll
+#	new file:   packages/Telegram.Bot.10.1.0-beta-1/lib/netstandard1.1/Telegram.Bot.xml
+#
+

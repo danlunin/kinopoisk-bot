@@ -18,13 +18,13 @@ namespace FilmAdvisor
         public Parser()
         {
             filmPageUrl = new Regex(@"^/film/\d+/$");
-            entriesOnSearchResults = new Regex("<div class=\"info\">(.*?)</div>", RegexOptions.Singleline);
+            entriesOnSearchResults = new Regex("<div class=\"info\">(.+?)</div>", RegexOptions.Singleline);
             filmPageRegexes = new Dictionary<string, Regex>();
-            filmPageRegexes["year"] = new Regex("<td class=\"type\">год</td>.+title=\"\">(\\d+?)</a>", RegexOptions.Singleline);
+            filmPageRegexes["year"] = new Regex("<td class=\"type\">год</td>.+title=\"\">([\\d –]+?)</a>", RegexOptions.Singleline);
             filmPageRegexes["name"] = new Regex("<h1 class=\"moviename-big\" itemprop=\"name\">(.+?)<");
             SearchResultsRegexes = new Dictionary<string, Regex>();
             SearchResultsRegexes["name"] = new Regex("<p class=\"name\">.*?data-type=\".*?\">(.+?)</a>", RegexOptions.Singleline);
-            SearchResultsRegexes["year"] = new Regex("<span class=\"year\">\\d+?</span>", RegexOptions.Singleline);
+            SearchResultsRegexes["year"] = new Regex("<span class=\"year\">(.+?)</span>", RegexOptions.Singleline);
 
         }
         public bool IsFilmPage(Uri url)
