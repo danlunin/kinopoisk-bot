@@ -25,5 +25,15 @@ namespace FilmAdvisor
             Name = name;
             year = Year;
         }
+
+        public override string ToString()
+        {
+            return String.Format("Name: {0}, Country: {1}, Year: {2}, Rate: {3}, Producer{4}",
+                Name,
+                Country,
+                Year,
+                Rate,
+                Producer);
+        }
     }
 }

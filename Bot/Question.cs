@@ -8,14 +8,11 @@ namespace TelegramBot
 {
     public enum QuestionType
     {
-        From_Year,
-        To_Year,
         Year,
         Genre,
         Country,
-        Actor
-        //Rate,
-        //Other
+        Rate,
+        Other
     }
 
     public class Question

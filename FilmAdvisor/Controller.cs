@@ -7,10 +7,29 @@ using RestSharp;
 using TelegramBot;
 using System.Text.RegularExpressions;
 
+
 namespace FilmAdvisor
 {
-    class Controller : IController
+    public class Controller : IController
     {
+        private IParser parser;
+        private IRequester requester;
+        //private IBot bot;
+        public Controller(IParser parser, IRequester requester, IBot bot)
+        {
+            this.parser = parser;
+            this.requester = requester;
+            //this.bot = bot;
+        }
+        public Question[] GetQuestions() {
+            var genre = new Question("Введите жанр", QuestionType.Genre, "");
+            var year = new Question("Введите год", QuestionType.Year, @"\d\d\d\d");
+            var country = new Question("Введите страну", QuestionType.Country, "");
+            //var rate = new Question("Введите рейтинг", QuestionType.Rate, "");
+
+            return new[] { genre, year, country };
+        }
+
         public IEnumerable<Question> MakeQuestions(Dictionary<String, QuestionType> parameters)
         {
             foreach (var key in parameters.Keys)
@@ -19,65 +38,39 @@ namespace FilmAdvisor
 
         public bool CheckAnswer(Question question)
         {
-            return true;
-            //return Regex.IsMatch(question.Answer, question.Pattern);
-            //try
-            //{
-            //    if (question.QuestionType.Equals(QuestionType.Year))
-            //        Int32.Parse(answer);
-            //    else if (question.QuestionType.Equals(QuestionType.BorderRate))
-            //        Double.Parse(answer);
-            //    else return true;
-            //    return true;
-            //}
-            //catch (System.FormatException)
-            //{
-            //    return false;
-            //}
+            return Regex.IsMatch(question.Answer, question.Pattern);
 
         }
 
         public IEnumerable<KeyValuePair<string, object>> GetDictionaryForRequest(
-            Dictionary<String, QuestionType> questions,
-            Bot bot)
-        {
-            foreach (var q in MakeQuestions(questions))
-            {
-                bot.Ask(q);
-                if (CheckAnswer(q))
+            Question[] questions,
+            IBot bot, long id, MsgOffset msg) {
+            foreach (var q in questions) {
+                bot.Ask(q, id, msg);
+                if (CheckAnswer(q)) {
+                    Console.WriteLine(q.QuestionType.ToString() + q.Answer);
                     yield return new KeyValuePair<string, object>(q.QuestionType.ToString(), q.Answer);
+                }
             }
         }
 
-        public IEnumerable<IFilm> EarnFilms(IEnumerable<KeyValuePair<string, object>> requestDict, int amountOfFilms)
+        public List<IFilm> EarnFilms(IEnumerable<KeyValuePair<string, object>> requestDict, 
+            int amountOfFilms)
         {
-            var requester = new Requester();
-            var response = requester.Search(new Parameters(requestDict));
-            var parser = new Parser();
-            return parser.GetFilms(response).Take(amountOfFilms);
+            var rawResponse = requester.Search(new Parameters(requestDict));
+            var films = parser.GetFilms(rawResponse);
+            return films.Take(amountOfFilms).ToList();
         }
 
-        public void StartControlling()
-        {
-            var questions = new Dictionary<String, QuestionType>();
-            questions.Add("Note lowest border of the film's year", QuestionType.Year);
-            questions.Add("Select genre", QuestionType.Genre);
-            questions.Add("Choose film's country", QuestionType.Country);
-            //questions.Add("Note lowest rate", QuestionType.BorderRate);
-            var bot = new Bot();
-            bot.Run();
-            var requestDict = GetDictionaryForRequest(questions, bot);
-            foreach (var film in EarnFilms(requestDict, 10))
-            {
-                bot.SendMessage(String.Format("Name: {0}, Country: {1}, Year: {2}, Rate: {3}, Producer{4}",
-                    film.Name,
-                    film.Country,
-                    film.Year,
-                    film.Rate,
-                    film.Producer));  // -> В фильме переопределить ToString()
+        public async Task ProcessUserAsync(IBot bot, long id, MsgOffset msgOffset) {
+            var questions = GetQuestions();
+            var request = GetDictionaryForRequest(questions, bot, id, msgOffset);
+            var films = EarnFilms(request, 10);
+            foreach (var film in films) {
+                Console.WriteLine(film.Name);
+                Console.WriteLine(film);
             }
-            bot.SendMessage("Enjoy your time!");
+            bot.CloseUser(id);
         }
-
     }
 }

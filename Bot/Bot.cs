@@ -9,113 +9,80 @@ using Telegram.Bot.Helpers;
 using System.Net.Http;
 using Telegram.Bot.Types.Enums;
 
-namespace TelegramBot
-{
-    public class Bot
-    {
-        public TelegramBotClient bot { get; set; }
+namespace TelegramBot {
+    public class MsgOffset {
         public int Offset { get; set; } = 0;
-        public long ChatId { get; set; }
+    }
 
-        public Bot()
-        {
+    public class Bot :IBot {
+        public TelegramBotClient bot { get; set; }
+        //public int Offset { get; set; } = 0;
+        //public long ChatId { get; set; }
+        public Queue<long> Users { get; set; } = new Queue<long>();
+        public List<long> ProcessingUsers { get; set; } = new List<long>();
+
+        public Bot() {
             bot = new TelegramBotClient(Config.Token);
         }
 
-        public void Run()
-        {
-            StartAsync().Wait();
+        public long GetUser() {
+            return Users.Dequeue();
         }
 
-        private async Task StartAsync(string startMessage = "/start")
-        {
-            while (true)
-            {
-                var updates = bot.GetUpdatesAsync(Offset).Result;
-                // (var update in updates)
-                //{
-                if (updates.Length > 0)
-                {
-                    var update = updates[updates.Length - 1];
-                    Offset = update.Id + 1;
-                    if (update.Message.Text == startMessage)
-                    {
-                        ChatId = update.Message.Chat.Id;
+        public void CloseUser(long chatId) {
+            SendMessage("Enjoy your time!", chatId);
+            ProcessingUsers.Remove(chatId);
+        }
+
+        public void Run(MsgOffset offset) {
+            StartAsync(offset).Wait();
+        }
+
+        private async Task StartAsync(MsgOffset msgOffset, string startMessage = "/start") {
+            while (true) {
+                var updates = await bot.GetUpdatesAsync(msgOffset.Offset);
+                foreach (var update in updates) {
+                    msgOffset.Offset = update.Id + 1;
+                    if (update.Message.Text == startMessage && !ProcessingUsers.Contains(update.Message.Chat.Id)) {
+                        Users.Enqueue(update.Message.Chat.Id);
+                        ProcessingUsers.Add(update.Message.Chat.Id);
                         return;
                     }
                 }
-                //}
             }
-
-            //while (true)
-            //{
-            //    var isStart = await WaitMessageAsync();
-            //    if (isStart)
-            //        break;
-            //}
-            //foreach (var q in questions)
-            //{
-            //    await Bot.SendChatAction(ChatId, ChatAction.Typing);
-            //    await Task.Delay(1000);
-            //    await Bot.SendTextMessage(ChatId, q.QuestionText);
-
-            //    GetAnswer(q).Wait();
-            //}
-            //await Task.Delay(1000);
         }
 
-        public void Ask(Question q)
-        {
-            _Ask(q).Wait();
+
+        public void Ask(Question q, long chatId, MsgOffset offset) {
+            _Ask(q, chatId).Wait();
+            GetAnswer(q, chatId, offset).Wait();
         }
 
-        private async Task _Ask(Question q)
-        {
-            
-            await bot.SendChatActionAsync(ChatId, ChatAction.Typing);
+        private async Task _Ask(Question q, long chatId) {
+            await bot.SendChatActionAsync(chatId, ChatAction.Typing);
             await Task.Delay(1000);
-            await bot.SendTextMessageAsync(ChatId, q.QuestionText);
-
-            GetAnswer(q).Wait();
+            await bot.SendTextMessageAsync(chatId, q.QuestionText);
         }
 
-        //public async Task<bool> WaitMessageAsync(string startMessage = "/start")
-        //{
-        //    var updates = await Bot.GetUpdates(Offset);
-        //    foreach (var update in updates)
-        //    {
-        //        Offset = update.Id + 1;
-        //        if (update.Message.Text == startMessage)
-        //        {
-        //            ChatId = update.Message.Chat.Id;
-        //            return true;
-        //        }
-        //    }
-        //    return false;
-        //}
-        
-        private async Task GetAnswer(Question question)
-        {
-            while (true)
-            {
-                var updates = await bot.GetUpdatesAsync(Offset);
-                foreach (var update in updates)
-                {
-                    question.Answer = update.Message.Text;
-                    Offset = update.Id + 1;
-                    return;
+        private async Task GetAnswer(Question question, long chatId, MsgOffset msgOffset) {
+            while (true) {
+                var updates = await bot.GetUpdatesAsync(msgOffset.Offset);
+                foreach (var update in updates) {
+                    msgOffset.Offset = update.Id + 1;
+                    if (update.Message.Chat.Id == chatId) {
+                        question.Answer = update.Message.Text;
+                        return;
+                    }
                 }
             }
         }
-        
-        public void SendMessage(string message)
-        {
-            _SendMessage(message).Wait();
+
+        public void SendMessage(string message, long chatId) {
+            _SendMessage(message, chatId).Wait();
         }
 
-        private async Task _SendMessage(string message)
-        {
-            await bot.SendTextMessageAsync(ChatId, message);
+        private async Task _SendMessage(string message, long chatId) {
+            await bot.SendTextMessageAsync(chatId, message);
         }
     }
 }

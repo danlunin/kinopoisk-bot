@@ -5,33 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 using TelegramBot;
 
-namespace FilmAdvisor
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            var c = new Controller();
-            c.StartControlling();
-            //var genre = new Question("Введите жанр", QuestionType.Genre, "");
-            //var year = new Question("Введите год", QuestionType.Year, "");
-            //var country = new Question("Введите страну", QuestionType.Country, "");
-            //var rate = new Question("Введите рейтинг", QuestionType.Rate, "");
+namespace FilmAdvisor {
+    public class Program {
+        public static async void Start(Controller c, Bot bot, long id, MsgOffset msgOffset) {
+            await c.ProcessUserAsync(bot, id, msgOffset);
+        }
 
-            //var questions = new[] { genre, year, country, rate };
-
-            //var bot = new Bot();
-
-            //bot.Run();
-
-            //foreach (var q in questions)
-            //    bot.Ask(q);
+        public static void Main(string[] args) {
+            var bot = new Bot();
+            var c = new Controller(new Parser(), new Requester(), bot);
             
-
-            //bot.SendMessage("Genre: " + genre.Answer);
-            //bot.SendMessage("Year: " + year.Answer);
-            //bot.SendMessage("Country: " + country.Answer);
-            //bot.SendMessage("Rate: " + rate.Answer);
+            while (true) {
+                var msgOffset = new MsgOffset();
+                bot.Run(msgOffset);
+                Start(c, bot, bot.GetUser(), msgOffset);
+            }
         }
     }
 }
