@@ -48,3 +48,6 @@ C:\Users\Даниил\Downloads\FilmAdvisor\FilmAdvisor\FilmAdvisor\bin\Debug\Sy
 C:\Users\Даниил\Downloads\FilmAdvisor\FilmAdvisor\FilmAdvisor\obj\Debug\FilmAdvisor.csprojResolveAssemblyReference.cache
 C:\Users\Даниил\Downloads\FilmAdvisor\FilmAdvisor\FilmAdvisor\bin\Debug\FakeItEasy.dll
 C:\Users\Даниил\Downloads\FilmAdvisor\FilmAdvisor\FilmAdvisor\bin\Debug\FakeItEasy.xml
+C:\Users\Даниил\Documents\kinopoisk-bot\FilmAdvisor\bin\Debug\FilmAdvisor.exe.config
+C:\Users\Даниил\Documents\kinopoisk-bot\FilmAdvisor\obj\Debug\FilmAdvisor.exe
+C:\Users\Даниил\Documents\kinopoisk-bot\FilmAdvisor\obj\Debug\FilmAdvisor.pdb
