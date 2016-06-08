@@ -3,16 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Telegram.Bot;
 
-namespace Bot
+
+namespace TelegramBot
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            var Bot = new Api(Config.Token);
-            var me = Bot.GetMe().Result;
+            testApiAsync();
+        }
+
+        static async void testApiAsync()
+        {
+            var Bot = new Telegram.Bot.Api("your API access Token");
+            var me = await Bot.GetMeAsync();
             System.Console.WriteLine("Hello my name is " + me.FirstName);
         }
     }

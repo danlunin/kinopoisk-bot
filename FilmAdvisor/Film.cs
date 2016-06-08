@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FilmAdvisor {
-    public class Film : IFilm {
+namespace FilmAdvisor
+{
+    public class Film : IFilm
+    {
         public string Name { get; set; }
 
         public string Year { get; set; }
@@ -18,7 +20,8 @@ namespace FilmAdvisor {
 
         public string Producer { get; set; }
 
-        public Film(string name, string year) {
+        public Film(string name, string year)
+        {
             Name = name;
             year = Year;
         }

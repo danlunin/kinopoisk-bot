@@ -10,11 +10,26 @@ C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\FilmAdv
 C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\FilmAdvisor\FilmAdvisor\bin\Debug\FilmAdvisor.exe
 C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\FilmAdvisor\FilmAdvisor\bin\Debug\FilmAdvisor.pdb
 C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\FilmAdvisor\FilmAdvisor\obj\Debug\FilmAdvisor.csprojResolveAssemblyReference.cache
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\FilmAdvisor\FilmAdvisor\bin\Debug\Bot.exe
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\FilmAdvisor\FilmAdvisor\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\FilmAdvisor\FilmAdvisor\bin\Debug\Bot.pdb
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\FilmAdvisor\FilmAdvisor\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\bin\Debug\FilmAdvisor.exe.config
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\obj\Debug\FilmAdvisor.exe
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\obj\Debug\FilmAdvisor.pdb
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\obj\Debug\FilmAdvisor.csprojResolveAssemblyReference.cache
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\bin\Debug\FilmAdvisor.exe
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\bin\Debug\FilmAdvisor.pdb
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\bin\Debug\Bot.exe
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\bin\Debug\RestSharp.dll
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\bin\Debug\Bot.pdb
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\bin\Debug\RestSharp.xml
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\bin\Debug\Telegram.Bot.dll
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\bin\Debug\Telegram.Bot.xml
+C:\Users\mmmvi\Desktop\My folder\HomeWork\ЯТП\FilmAdvisor\FilmAdvisor\bin\Debug\System.Net.Http.Formatting.xml
 B:\GitHub\kinopoisk-bot\FilmAdvisor\bin\Debug\FilmAdvisor.exe.config
 B:\GitHub\kinopoisk-bot\FilmAdvisor\obj\Debug\FilmAdvisor.exe
 B:\GitHub\kinopoisk-bot\FilmAdvisor\obj\Debug\FilmAdvisor.pdb
-B:\GitHub\kinopoisk-bot\FilmAdvisor\bin\Debug\FilmAdvisor.exe
-B:\GitHub\kinopoisk-bot\FilmAdvisor\bin\Debug\FilmAdvisor.pdb
-B:\GitHub\kinopoisk-bot\FilmAdvisor\bin\Debug\RestSharp.dll
-B:\GitHub\kinopoisk-bot\FilmAdvisor\bin\Debug\RestSharp.xml
-B:\GitHub\kinopoisk-bot\FilmAdvisor\obj\Debug\FilmAdvisor.csprojResolveAssemblyReference.cache

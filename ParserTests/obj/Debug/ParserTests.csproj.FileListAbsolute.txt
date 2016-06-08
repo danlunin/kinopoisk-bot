@@ -9,3 +9,12 @@ B:\GitHub\kinopoisk-bot\ParserTests\bin\Debug\nunit.framework.xml
 B:\GitHub\kinopoisk-bot\ParserTests\bin\Debug\RestSharp.xml
 B:\GitHub\kinopoisk-bot\ParserTests\obj\Debug\ParserTests.dll
 B:\GitHub\kinopoisk-bot\ParserTests\obj\Debug\ParserTests.pdb
+B:\GitHub\kinopoisk-bot\ParserTests\bin\Debug\ParserTests.dll.config
+B:\GitHub\kinopoisk-bot\ParserTests\bin\Debug\Bot.exe
+B:\GitHub\kinopoisk-bot\ParserTests\bin\Debug\Telegram.Bot.dll
+B:\GitHub\kinopoisk-bot\ParserTests\bin\Debug\Newtonsoft.Json.dll
+B:\GitHub\kinopoisk-bot\ParserTests\bin\Debug\System.Net.Http.Formatting.dll
+B:\GitHub\kinopoisk-bot\ParserTests\bin\Debug\Bot.pdb
+B:\GitHub\kinopoisk-bot\ParserTests\bin\Debug\Telegram.Bot.xml
+B:\GitHub\kinopoisk-bot\ParserTests\bin\Debug\Newtonsoft.Json.xml
+B:\GitHub\kinopoisk-bot\ParserTests\bin\Debug\System.Net.Http.Formatting.xml
