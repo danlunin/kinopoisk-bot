@@ -298,7 +298,10 @@ namespace KinoPoiskApi
                         throw new ArgumentException();
                     return genresMapping[x];
                 },
-
+                [SearchParameterType.From_Year] = x => x,
+                [SearchParameterType.To_Year] = x => x,
+                [SearchParameterType.Year] = x => x,
+                [SearchParameterType.Actor] = x => x
             };
         }
 
