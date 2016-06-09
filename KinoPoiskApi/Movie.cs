@@ -6,6 +6,14 @@ using System.Threading.Tasks;
 
 namespace KinoPoiskApi{
     public class Movie : IMovie {
+
+        public Movie() {}
+
+        public Movie(string name, string year) {
+            Name = name;
+            Year = year;
+        }
+
         public string Name { get; set; }
 
         public string Year { get; set; }

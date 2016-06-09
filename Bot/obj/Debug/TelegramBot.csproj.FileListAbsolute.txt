@@ -46,3 +46,15 @@ C:\Users\mmmvi\Documents\GitHub\kinopoisk-bot\Bot\bin\Debug\Telegram.Bot.xml
 C:\Users\mmmvi\Documents\GitHub\kinopoisk-bot\Bot\obj\Debug\TelegramBot.csprojResolveAssemblyReference.cache
 C:\Users\mmmvi\Documents\GitHub\kinopoisk-bot\Bot\obj\Debug\Bot.exe
 C:\Users\mmmvi\Documents\GitHub\kinopoisk-bot\Bot\obj\Debug\Bot.pdb
+B:\GitHub\kinopoisk-bot\Bot\bin\Debug\Bot.exe.config
+B:\GitHub\kinopoisk-bot\Bot\bin\Debug\Bot.exe
+B:\GitHub\kinopoisk-bot\Bot\bin\Debug\Bot.pdb
+B:\GitHub\kinopoisk-bot\Bot\bin\Debug\Newtonsoft.Json.dll
+B:\GitHub\kinopoisk-bot\Bot\bin\Debug\System.Net.Http.Formatting.dll
+B:\GitHub\kinopoisk-bot\Bot\bin\Debug\Telegram.Bot.dll
+B:\GitHub\kinopoisk-bot\Bot\bin\Debug\Newtonsoft.Json.xml
+B:\GitHub\kinopoisk-bot\Bot\bin\Debug\System.Net.Http.Formatting.xml
+B:\GitHub\kinopoisk-bot\Bot\bin\Debug\Telegram.Bot.xml
+B:\GitHub\kinopoisk-bot\Bot\obj\Debug\TelegramBot.csprojResolveAssemblyReference.cache
+B:\GitHub\kinopoisk-bot\Bot\obj\Debug\Bot.exe
+B:\GitHub\kinopoisk-bot\Bot\obj\Debug\Bot.pdb

@@ -1,4 +1,3 @@
-B:\GitHub\kinopoisk-bot\KinoPoiskApi\obj\Debug\KinoPoiskApi.csprojResolveAssemblyReference.cache
 B:\GitHub\kinopoisk-bot\KinoPoiskApi\bin\Debug\KinoPoiskParser.dll
 B:\GitHub\kinopoisk-bot\KinoPoiskApi\bin\Debug\KinoPoiskParser.pdb
 B:\GitHub\kinopoisk-bot\KinoPoiskApi\bin\Debug\AngleSharp.dll
