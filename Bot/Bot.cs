@@ -9,41 +9,47 @@ using Telegram.Bot.Helpers;
 using System.Net.Http;
 using Telegram.Bot.Types.Enums;
 
-namespace TelegramBot {
-    public class MsgOffset {
-        public int Offset { get; set; } = 0;
-    }
-
-    public class Bot :IBot {
+namespace TelegramBot
+{
+    public class Bot : IBot
+    {
         public TelegramBotClient bot { get; set; }
         //public int Offset { get; set; } = 0;
         //public long ChatId { get; set; }
         public Queue<long> Users { get; set; } = new Queue<long>();
         public List<long> ProcessingUsers { get; set; } = new List<long>();
 
-        public Bot() {
+        public Bot()
+        {
             bot = new TelegramBotClient(Config.Token);
         }
 
-        public long GetUser() {
-            return Users.Dequeue();
+        public User GetUser()
+        {
+            return new User(this, Users.Dequeue());
         }
 
-        public void CloseUser(long chatId) {
-            SendMessage("Enjoy your time!", chatId);
-            ProcessingUsers.Remove(chatId);
+        public void CloseUser(User user)
+        {
+            SendMessage("Enjoy your time!", user);
+            ProcessingUsers.Remove(user.ChatId);
         }
 
-        public void Run(User user) {
-            StartAsync(user.Offset).Wait();
+        public void Run(User user)
+        {
+            StartAsync(user).Wait();
         }
 
-        private async Task StartAsync(MsgOffset msgOffset, string startMessage = "/start") {
-            while (true) {
-                var updates = await bot.GetUpdatesAsync(msgOffset.Offset);
-                foreach (var update in updates) {
-                    msgOffset.Offset = update.Id + 1;
-                    if (update.Message.Text == startMessage && !ProcessingUsers.Contains(update.Message.Chat.Id)) {
+        private async Task StartAsync(User user, string startMessage = "/start")
+        {
+            while (true)
+            {
+                var updates = await bot.GetUpdatesAsync(user.Offset);
+                foreach (var update in updates)
+                {
+                    user.Offset = update.Id + 1;
+                    if (update.Message.Text == startMessage && !ProcessingUsers.Contains(update.Message.Chat.Id))
+                    {
                         Users.Enqueue(update.Message.Chat.Id);
                         ProcessingUsers.Add(update.Message.Chat.Id);
                         return;
@@ -53,23 +59,22 @@ namespace TelegramBot {
         }
 
 
-        public void Ask(Question q, long chatId, MsgOffset offset) {
-            _Ask(q, chatId).Wait();
-            GetAnswer(q, chatId, offset).Wait();
+        public void Ask(Question q, User user)
+        {
+            SendMessage(q.QuestionText, user);
+            GetAnswer(q, user).Wait();
         }
 
-        private async Task _Ask(Question q, long chatId) {
-            await bot.SendChatActionAsync(chatId, ChatAction.Typing);
-            await Task.Delay(1000);
-            await bot.SendTextMessageAsync(chatId, q.QuestionText);
-        }
-
-        private async Task GetAnswer(Question question, long chatId, MsgOffset msgOffset) {
-            while (true) {
-                var updates = await bot.GetUpdatesAsync(msgOffset.Offset);
-                foreach (var update in updates) {
-                    msgOffset.Offset = update.Id + 1;
-                    if (update.Message.Chat.Id == chatId) {
+        private async Task GetAnswer(Question question, User user)
+        {
+            while (true)
+            {
+                var updates = await bot.GetUpdatesAsync(user.Offset);
+                foreach (var update in updates)
+                {
+                    user.Offset = update.Id + 1;
+                    if (update.Message.Chat.Id == user.ChatId)
+                    {
                         question.Answer = update.Message.Text;
                         return;
                     }
@@ -77,12 +82,16 @@ namespace TelegramBot {
             }
         }
 
-        public void SendMessage(string message, long chatId) {
-            _SendMessage(message, chatId).Wait();
+        public void SendMessage(string message, User user)
+        {
+            _SendMessage(message, user).Wait();
         }
 
-        private async Task _SendMessage(string message, long chatId) {
-            await bot.SendTextMessageAsync(chatId, message);
+        private async Task _SendMessage(string message, User user)
+        {
+            await bot.SendChatActionAsync(user.ChatId, ChatAction.Typing);
+            await Task.Delay(1000);
+            await bot.SendTextMessageAsync(user.ChatId, message);
         }
     }
 }

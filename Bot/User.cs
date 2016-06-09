@@ -4,21 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TelegramBot {
+namespace TelegramBot
+{
     public class User : IDisposable
     {
 
         public long ChatId { get; set; }
-        public MsgOffset Offset { get; set; }
-        public IBot bot;
+        public int Offset { get; set; }
+        public Bot Bot;
 
-        public User()
+        public User(Bot bot, long chatId = 0, int offset = 0)
         {
-            this.Offset = new MsgOffset();
+            ChatId = chatId;
+            Offset = offset;
+            Bot = bot;
         }
 
-        public void Dispose() {
-            bot.CloseUser(ChatId);
+        public void Dispose()
+        {
+            Bot.CloseUser(this);
         }
     }
 }

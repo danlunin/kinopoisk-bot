@@ -5,22 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 using TelegramBot;
 
-namespace FilmAdvisor {
-    public class Program {
-        public static async void Start(Controller c, User user) {
+namespace FilmAdvisor
+{
+    public class Program
+    {
+        public static async void Start(Controller c, User user)
+        {
             await c.ProcessUserAsync(user);
         }
 
-        public static void Main(string[] args) {
+        public static void Main(string[] args)
+        {
+            var c = new Controller(new Parser(), new Requester());
             var bot = new Bot();
-            var c = new Controller(new Parser(), new Requester(), bot);
-            
-            while (true) {
-                var user = new User();
+            while (true)
+            {
+                var user = new User(bot);
                 bot.Run(user);
-                user.ChatId = bot.GetUser();
-                user.bot = bot;
-                Start(c, user);
+                Start(c, bot.GetUser());
             }
         }
     }

@@ -8,14 +8,11 @@ namespace TelegramBot
 {
     public interface IBot
     {
-        long GetUser();
-
-        void CloseUser(long chatId);
+        User GetUser();
+        void CloseUser(User user);
 
         void Run(User user);
-
-
-        void Ask(Question q, long chatId, MsgOffset offset);
-
+        void Ask(Question q, User user);
+        void SendMessage(string message, User user);
     }
 }
