@@ -8,7 +8,7 @@ using RestSharp;
 
 namespace KinoPoiskApi
 {
-    public class Parser {
+    public class Parser : IParser{
         public IEnumerable<Dictionary<RequiredValueType, string>> GetMovies(IRestResponse response, IEnumerable<RequiredValueType> requiredValues) {
             throw new NotImplementedException();
         }

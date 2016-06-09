@@ -61,7 +61,10 @@ namespace TelegramBot {
                 var timer = new Stopwatch();
                 timer.Start();
                 var updates = await bot.GetUpdatesAsync(user.Offset);
-                if (timer.Elapsed.Minutes > 1) throw new ClientException();
+                if (timer.Elapsed.Minutes > 0)
+                {
+                    throw new ClientException();
+                }
                 foreach (var update in updates) {
                     user.Offset = update.Id + 1;
                     if (update.Message.Chat.Id == user.ChatId) {

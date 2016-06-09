@@ -36,6 +36,7 @@ namespace FilmAdvisor {
                     
                 } catch (ClientException) {
                     user.Dispose();
+                    Console.WriteLine("Slow user!");
                 }
                 if (CheckAnswer(q)) {
                     Console.WriteLine(q.QuestionType.ToString() + " " + q.Answer);
