@@ -11,9 +11,9 @@ namespace TelegramBot
 
         public long ChatId { get; set; }
         public int Offset { get; set; }
-        public Bot Bot;
+        public IBot Bot;
 
-        public User(Bot bot, long chatId = 0, int offset = 0)
+        public User(IBot bot, long chatId = 0, int offset = 0)
         {
             ChatId = chatId;
             Offset = offset;

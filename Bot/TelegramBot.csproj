@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientException.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Bot.cs" />
     <Compile Include="IBot.cs" />
